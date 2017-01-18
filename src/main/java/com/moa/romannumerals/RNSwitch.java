@@ -5,12 +5,21 @@ public class RNSwitch {
 
 	public Object arabicToRoman(int arabic) {
 		
+		String roman = "";
+		
 		if (arabic == 10) {
-			return "X";
+			roman = "X";
 		}
-		if (arabic == 5) {
-			return "V";
+		else if (arabic == 5) {
+			roman = "V";
 		}
-		return "I";
+		else {
+			while (arabic > 0) {
+				roman += "I";
+				arabic--;
+			}
+		}
+		
+		return roman;
 	}
 }
