@@ -10,6 +10,9 @@ public class RNSwitch {
 		if (arabic == 10) {
 			roman = "X";
 		}
+		else if (arabic == 9) {
+			roman = "IX";
+		}
 		else if (arabic == 5) {
 			roman = "V";
 		}
