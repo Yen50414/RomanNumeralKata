@@ -12,4 +12,10 @@ public class RNSwitchTest {
 		RNSwitch rnSwitch = new RNSwitch();
         assertEquals("I", rnSwitch.arabicToRoman(1));
     }
+	
+	@Test
+	public void switchArabicToRoman5() {
+		RNSwitch rnSwitch = new RNSwitch();
+        assertEquals("V", rnSwitch.arabicToRoman(5));
+    }
 }
