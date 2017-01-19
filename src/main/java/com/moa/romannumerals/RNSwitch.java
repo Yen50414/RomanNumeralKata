@@ -16,6 +16,9 @@ public class RNSwitch {
 		else if (arabic == 5) {
 			roman = "V";
 		}
+		else if (arabic == 4) {
+			roman = "IV";
+		}
 		else {
 			while (arabic > 0) {
 				roman += "I";
