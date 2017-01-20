@@ -143,4 +143,9 @@ public class RNSwitchTest {
 	public void switchArabicToRoman1066() {
         assertEquals("MLXVI", rnSwitch.arabicToRoman(1066));
     }
+	
+	@Test
+	public void switchArabicToRoman1989() {
+        assertEquals("MCMLXXXIX", rnSwitch.arabicToRoman(1989));
+    }
 }
