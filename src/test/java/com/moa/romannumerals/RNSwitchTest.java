@@ -164,4 +164,12 @@ public class RNSwitchTest {
 	public void switchArabicToRoman1989() {
         assertEquals("MCMLXXXIX", rnSwitch.arabicToRoman(1989));
     }
+	
+	@Test
+	public void switchArabicToRomanAll3000sBeginWithMMM() {
+		for (int i = 3000; i <= maxValue; i++) {
+			String result = rnSwitch.arabicToRoman(i);
+			assertTrue(i + " != " + result, result.startsWith("MMM"));
+		}
+    }
 }
