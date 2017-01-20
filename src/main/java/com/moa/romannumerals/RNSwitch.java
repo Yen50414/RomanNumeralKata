@@ -12,7 +12,7 @@ public class RNSwitch {
 			arabic -= 10;
 		}
 		if (arabic == 9) {
-			roman = "IX";
+			roman += "IX";
 			arabic -= 9;
 		}
 		else if (arabic >= 5) {
