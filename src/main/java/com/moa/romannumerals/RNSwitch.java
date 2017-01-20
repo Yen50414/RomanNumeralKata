@@ -8,7 +8,7 @@ public class RNSwitch {
 		String roman = "";
 		
 		while (arabic >= 10) {
-			roman = "X";
+			roman += "X";
 			arabic -= 10;
 		}
 		if (arabic == 9) {
