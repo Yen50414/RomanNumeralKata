@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class RNSwitch {
 	
 	private ArrayList<String> symbolList;
+	private ArrayList<Integer> valueList;
 	
 	public RNSwitch() {
 		symbolList = new ArrayList<String>();
@@ -22,6 +23,21 @@ public class RNSwitch {
 		symbolList.add("V");
 		symbolList.add("IV");
 		symbolList.add("I");
+		
+		valueList = new ArrayList<Integer>();
+		valueList.add(1000);
+		valueList.add(900);
+		valueList.add(500);
+		valueList.add(400);
+		valueList.add(100);
+		valueList.add(90);
+		valueList.add(50);
+		valueList.add(40);
+		valueList.add(10);
+		valueList.add(9);
+		valueList.add(5);
+		valueList.add(4);
+		valueList.add(1);
 	}
 
 	public String arabicToRoman(int arabic) {
@@ -32,70 +48,13 @@ public class RNSwitch {
 		int symbolIndex = 0;
 		String roman = "";
 		
-		while (arabic >= 1000) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 1000;
-		}
-		symbolIndex++;
-		while (arabic >= 900) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 900;
-		}
-		symbolIndex++;
-		while (arabic >= 500) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 500;
-			
-		}
-		symbolIndex++;
-		while (arabic >= 400) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 400;
-		}
-		symbolIndex++;
-		while (arabic >= 100) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 100;
-		}
-		symbolIndex++;
-		while (arabic >= 90) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 90;
-		}
-		symbolIndex++;
-		while (arabic >= 50) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 50;
-		}
-		symbolIndex++;
-		while (arabic >= 40) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 40;
-		}
-		symbolIndex++;
-		while (arabic >= 10) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 10;
-		}
-		symbolIndex++;
-		while (arabic == 9) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 9;
-		}
-		symbolIndex++;
-		while (arabic >= 5) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 5;
-		}
-		symbolIndex++;
-		while (arabic == 4) {
-			roman += symbolList.get(symbolIndex);
-			arabic -= 4;
-		}
-		symbolIndex++;
 		while (arabic > 0) {
-			roman += symbolList.get(symbolIndex);
-			arabic--;
+			if (arabic >= valueList.get(symbolIndex)) {
+				roman += symbolList.get(symbolIndex);
+				arabic -= valueList.get(symbolIndex);
+			} else {
+				symbolIndex++;
+			}
 		}
 		
 		return roman;
