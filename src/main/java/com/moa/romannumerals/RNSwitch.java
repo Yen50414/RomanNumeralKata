@@ -5,6 +5,9 @@ public class RNSwitch {
 
 	public String arabicToRoman(int arabic) {
 		
+		if (arabic == 0)
+			return "Not a valid number";
+		
 		String roman = "";
 		
 		while (arabic >= 1000) {
