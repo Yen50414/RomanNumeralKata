@@ -15,11 +15,11 @@ public class RNSwitch {
 			roman += "XC";
 			arabic -= 90;
 		}
-		while (arabic >= 50) {
+		else if (arabic >= 50) {
 			roman += "L";
 			arabic -= 50;
 		}
-		if (arabic >= 40) {
+		else if (arabic >= 40) {
 			roman += "XL";
 			arabic -= 40;
 		}
