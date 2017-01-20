@@ -135,6 +135,14 @@ public class RNSwitchTest {
     }
 	
 	@Test
+	public void switchArabicToRomanAllEnding999() {
+		for (int i = 999; i <= maxValue; i += 1000) {
+			String result = rnSwitch.arabicToRoman(i);
+			assertTrue(i + " != " + result, result.endsWith("CMXCIX"));
+		}
+    }
+	
+	@Test
 	public void switchArabicToRoman1000() {
         assertEquals("M", rnSwitch.arabicToRoman(1000));
     }
