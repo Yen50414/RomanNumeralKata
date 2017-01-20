@@ -2,6 +2,7 @@
 package com.moa.romannumerals;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,6 +10,8 @@ import org.junit.Test;
 public class RNSwitchTest {
 	
 	RNSwitch rnSwitch;
+	
+	int maxValue = 3999;
 
 	@Before
 	public void setUp() {
@@ -63,5 +66,13 @@ public class RNSwitchTest {
 	@Test
 	public void switchArabicToRoman19() {
         assertEquals("XIX", rnSwitch.arabicToRoman(19));
+    }
+	
+	@Test
+	public void switchArabicToRomanAllEnding14() {
+		for (int i = 14; i < maxValue; i += 100) {
+			String result = rnSwitch.arabicToRoman(i);
+			assertTrue(i + " != " + result, result.endsWith("XIV"));
+		}
     }
 }

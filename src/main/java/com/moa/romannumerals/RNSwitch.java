@@ -3,7 +3,7 @@ package com.moa.romannumerals;
 
 public class RNSwitch {
 
-	public Object arabicToRoman(int arabic) {
+	public String arabicToRoman(int arabic) {
 		
 		String roman = "";
 		
@@ -20,7 +20,7 @@ public class RNSwitch {
 			arabic -= 5;
 		}
 		else if (arabic == 4) {
-				roman = "IV";
+				roman += "IV";
 				arabic -= 4;
 		}
 		while (arabic > 0) {
