@@ -93,4 +93,12 @@ public class RNSwitchTest {
 	public void switchArabicToRoman50() {
         assertEquals("L", rnSwitch.arabicToRoman(50));
     }
+	
+	@Test
+	public void switchArabicToRomanAllEnding100() {
+		for (int i = 100; i <= maxValue; i += 1000) {
+			String result = rnSwitch.arabicToRoman(i);
+			assertTrue(i + " != " + result, result.endsWith("C"));
+		}
+    }
 }
