@@ -7,16 +7,16 @@ public class RNSwitch {
 		
 		String roman = "";
 		
-		if (arabic == 10) {
+		while (arabic >= 10) {
 			roman = "X";
 			arabic -= 10;
 		}
-		else if (arabic == 9) {
+		if (arabic == 9) {
 			roman = "IX";
 			arabic -= 9;
 		}
 		else if (arabic >= 5) {
-			roman = "V";
+			roman += "V";
 			arabic -= 5;
 		}
 		else if (arabic == 4) {
