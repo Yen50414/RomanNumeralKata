@@ -5,7 +5,7 @@ public class RNSwitch {
 
 	public String arabicToRoman(int arabic) {
 		
-		if (arabic == 0)
+		if (arabic <= 0 || arabic >= 4000)
 			return "Not a valid number";
 		
 		String roman = "";

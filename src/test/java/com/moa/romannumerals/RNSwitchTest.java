@@ -177,4 +177,9 @@ public class RNSwitchTest {
 			assertTrue(i + " != " + result, result.startsWith("MMM"));
 		}
     }
+	
+	@Test
+	public void switchArabicToRoman4000() {
+		assertEquals("Not a valid number", rnSwitch.arabicToRoman(4000));
+    }
 }
