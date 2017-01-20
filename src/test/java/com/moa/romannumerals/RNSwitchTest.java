@@ -70,7 +70,7 @@ public class RNSwitchTest {
 	
 	@Test
 	public void switchArabicToRomanAllEnding14() {
-		for (int i = 14; i < maxValue; i += 100) {
+		for (int i = 14; i <= maxValue; i += 100) {
 			String result = rnSwitch.arabicToRoman(i);
 			assertTrue(i + " != " + result, result.endsWith("XIV"));
 		}
@@ -79,6 +79,14 @@ public class RNSwitchTest {
 	@Test
 	public void switchArabicToRoman22() {
         assertEquals("XXII", rnSwitch.arabicToRoman(22));
+    }
+	
+	@Test
+	public void switchArabicToRomanAllEnding40() {
+		for (int i = 40; i <= maxValue; i += 100) {
+			String result = rnSwitch.arabicToRoman(i);
+			assertTrue(i + " != " + result, result.endsWith("XL"));
+		}
     }
 	
 	@Test
