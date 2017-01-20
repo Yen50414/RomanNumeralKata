@@ -7,6 +7,10 @@ public class RNSwitch {
 		
 		String roman = "";
 		
+		while (arabic >= 500) {
+			roman += "D";
+			arabic -= 500;
+		}
 		while (arabic >= 100) {
 			roman += "C";
 			arabic -= 100;
