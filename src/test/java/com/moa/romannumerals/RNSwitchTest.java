@@ -95,6 +95,14 @@ public class RNSwitchTest {
     }
 	
 	@Test
+	public void switchArabicToRomanAllEnding90() {
+		for (int i = 90; i <= maxValue; i += 100) {
+			String result = rnSwitch.arabicToRoman(i);
+			assertTrue(i + " != " + result, result.endsWith("XC"));
+		}
+    }
+	
+	@Test
 	public void switchArabicToRomanAllEnding100() {
 		for (int i = 100; i <= maxValue; i += 1000) {
 			String result = rnSwitch.arabicToRoman(i);
