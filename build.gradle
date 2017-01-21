@@ -11,6 +11,9 @@
 apply plugin: 'java'
 // Apply eclipse plugin to generate eclipse project files
 apply plugin: 'eclipse'
+// Apply application plugin to create executable JVM application
+apply plugin: 'application'
+mainClassName = "com.moa.romannumerals.RNSwitchMain"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -31,3 +34,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+// Gradle run task by default use an empty stdin.  Need to specify input stream.
+run {
+	standardInput = System.in
+}
