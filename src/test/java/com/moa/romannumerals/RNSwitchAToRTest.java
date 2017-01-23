@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-public class RNSwitchTest {
+public class RNSwitchAToRTest {
 	
 	RNSwitch rnSwitch;
 	
@@ -181,10 +181,5 @@ public class RNSwitchTest {
 	@Test
 	public void switchArabicToRoman4000() {
 		assertEquals("Not a valid number", rnSwitch.arabicToRoman(4000));
-    }
-	
-	@Test
-	public void switchRomanToArabic1() {
-		assertEquals(1, rnSwitch.romanToArabic("I"));
     }
 }
