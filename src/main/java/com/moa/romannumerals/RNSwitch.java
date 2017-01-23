@@ -61,11 +61,16 @@ public class RNSwitch {
 	}
 
 	public int romanToArabic(String string) {
+		if (string.length() > 1) {
+			if (string.charAt(0) == 'I') {
+				if (string.charAt(1) == 'V') {
+					return 4;
+				}
+			}
+			return 1 + romanToArabic(string.substring(1));
+		}
 		if (string.charAt(0) == 'V') {
 			return 5;
-		}
-		if (string.length() > 1) {
-			return 1 + romanToArabic(string.substring(1));
 		}
 		return 1;
 	}
