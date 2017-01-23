@@ -23,4 +23,14 @@ public class RNSwitchRToATest {
 	public void switchRomanToArabic2() {
 		assertEquals(2, rnSwitch.romanToArabic("II"));
     }
+	
+	@Test
+	public void switchRomanToArabic3() {
+		assertEquals(3, rnSwitch.romanToArabic("III"));
+    }
+	
+	@Test
+	public void switchRomanToArabic5() {
+		assertEquals(5, rnSwitch.romanToArabic("V"));
+    }
 }
