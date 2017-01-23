@@ -62,7 +62,7 @@ public class RNSwitch {
 
 	public int romanToArabic(String string) {
 		if (string.length() > 1) {
-			return 2;
+			return 1 + romanToArabic(string.substring(1));
 		}
 		return 1;
 	}
