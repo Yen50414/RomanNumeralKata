@@ -59,4 +59,8 @@ public class RNSwitch {
 		
 		return roman;
 	}
+
+	public int romanToArabic(String string) {
+		return 1;
+	}
 }
