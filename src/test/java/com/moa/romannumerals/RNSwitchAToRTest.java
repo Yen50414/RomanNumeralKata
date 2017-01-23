@@ -1,4 +1,3 @@
-
 package com.moa.romannumerals;
 
 import static org.junit.Assert.assertEquals;
