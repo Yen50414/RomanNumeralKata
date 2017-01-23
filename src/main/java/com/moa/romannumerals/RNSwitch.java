@@ -60,18 +60,24 @@ public class RNSwitch {
 		return roman;
 	}
 
-	public int romanToArabic(String string) {
-		if (string.length() > 1) {
-			if (string.charAt(0) == 'I') {
-				if (string.charAt(1) == 'V') {
+	public int romanToArabic(String roman) {
+		
+		if (roman.length() > 1) {
+			if (roman.charAt(0) == 'I') {
+				if (roman.charAt(1) == 'V') {
 					return 4;
 				}
 			}
-			return 1 + romanToArabic(string.substring(1));
+			return 1 + romanToArabic(roman.substring(1));
 		}
-		if (string.charAt(0) == 'V') {
-			return 5;
+		
+		// Look up index of first character from symbol list
+		int symbolIndex = 0;
+		if (roman.length() > 0 && symbolList.contains(roman.substring(0, 1))) {
+			symbolIndex = symbolList.indexOf(roman.substring(0, 1));
 		}
-		return 1;
+		
+		// Retrieve value from value list
+		return valueList.get(symbolIndex);
 	}
 }
