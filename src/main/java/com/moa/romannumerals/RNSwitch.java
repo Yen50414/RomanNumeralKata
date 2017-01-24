@@ -63,6 +63,9 @@ public class RNSwitch {
 	public int romanToArabic(String roman) {
 		
 		if (roman.length() > 1) {
+			if (roman.charAt(0) == 'V') {
+				return 5 + romanToArabic(roman.substring(1));
+			}
 			if (roman.charAt(0) == 'I') {
 				if (roman.charAt(1) == 'V') {
 					return 4;
