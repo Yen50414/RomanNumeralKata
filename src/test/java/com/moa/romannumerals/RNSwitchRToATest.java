@@ -13,6 +13,11 @@ public class RNSwitchRToATest {
 	public void setUp() {
 		rnSwitch = new RNSwitch();
 	}
+	
+	@Test
+	public void switchRomanToArabicEmpty() {
+		assertEquals(-1, rnSwitch.romanToArabic(""));
+    }
 
 	@Test
 	public void switchRomanToArabic1() {
