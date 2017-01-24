@@ -62,20 +62,20 @@ public class RNSwitch {
 
 	public int romanToArabic(String roman) {
 		
-		if (roman.length() == 0) {
-			return -1;
-		}
-		
 		// Look up index of first character from symbol list
 		int symbolIndex = 0;
 		if (roman.length() > 0 && symbolList.contains(roman.substring(0, 1))) {
 			symbolIndex = symbolList.indexOf(roman.substring(0, 1));
+		} else {
+			return -1; // Treat -1 as error
 		}
 		
 		if (roman.length() > 1) {
 			if (roman.charAt(0) == 'I') {
 				if (roman.charAt(1) == 'V') {
 					return 4;
+				} else if (roman.charAt(1) == 'X') {
+					return 9;
 				}
 			}
 			return valueList.get(symbolIndex) + romanToArabic(roman.substring(1));
