@@ -40,6 +40,12 @@ public class RNSwitch {
 		valueList.add(1);
 	}
 
+	/**
+	 * Converts an Arabic number value to its Roman Numeral representation
+	 * 
+	 * @param arabic an Arabic number
+	 * @return String that contains the Roman Numeral representation of the input
+	 */
 	public String arabicToRoman(int arabic) {
 		
 		if (arabic <= 0 || arabic >= 4000)
@@ -60,6 +66,12 @@ public class RNSwitch {
 		return roman;
 	}
 
+	/**
+	 * Converts a Roman Numeral value to its Arabic number value
+	 * 
+	 * @param roman Roman Numeral representation of a value
+	 * @return integer value of roman numeral from input, returns -1 for invalid inputs.
+	 */
 	public int romanToArabic(String roman) {
 		
 		// Check input is valid roman numeral
