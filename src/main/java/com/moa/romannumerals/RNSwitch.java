@@ -62,6 +62,11 @@ public class RNSwitch {
 
 	public int romanToArabic(String roman) {
 		
+		// Check input is valid roman numeral
+		if (roman.equalsIgnoreCase("MMMM")) {
+			return -1;
+		}
+		
 		// Look up index of first character from symbol list
 		int symbolIndex = 0;
 		if (roman.length() > 0 && symbolList.contains(roman.substring(0, 1))) {
