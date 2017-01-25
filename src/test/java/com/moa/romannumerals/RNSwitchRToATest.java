@@ -113,4 +113,9 @@ public class RNSwitchRToATest {
 	public void switchRomanToArabicInvalidSymbol() {
 		assertEquals(-1, rnSwitch.romanToArabic("A"));
     }
+	
+	@Test
+	public void switchRomanToArabicInvalidSymbol2() {
+		assertEquals(-1, rnSwitch.romanToArabic("BB"));
+    }
 }
