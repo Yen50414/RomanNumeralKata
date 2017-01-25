@@ -63,4 +63,9 @@ public class RNSwitchRToATest {
 	public void switchRomanToArabic11() {
 		assertEquals(11, rnSwitch.romanToArabic("XI"));
     }
+	
+	@Test
+	public void switchRomanToArabic15() {
+		assertEquals(15, rnSwitch.romanToArabic("XV"));
+    }
 }
