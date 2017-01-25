@@ -38,3 +38,10 @@ dependencies {
 run {
 	standardInput = System.in
 }
+
+// To create runnable jar through gradle
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.moa.romannumerals.RNSwitchMain'
+    }
+}
