@@ -75,17 +75,15 @@ public class RNSwitch {
 	public int romanToArabic(String roman) {
 		
 		// Check input is valid roman numeral
-		if (roman.equalsIgnoreCase("MMMM")) {
+		if (roman.length() <= 0
+				|| !symbolList.contains(roman.substring(0, 1))
+				|| roman.equalsIgnoreCase("MMMM")) {
 			return -1;
 		}
 		
 		// Look up index of first character from symbol list
 		int symbolIndex = 0;
-		if (roman.length() > 0 && symbolList.contains(roman.substring(0, 1))) {
-			symbolIndex = symbolList.indexOf(roman.substring(0, 1));
-		} else {
-			return -1; // Treat -1 as error
-		}
+		symbolIndex = symbolList.indexOf(roman.substring(0, 1));
 		
 		if (roman.length() > 1) {
 			if (roman.charAt(0) == 'I') {
